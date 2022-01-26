@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ui", "ui", "{32B4A473-8CA7-4A8D-A7BB-EA88D4548712}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "PortalUI", "PortalUI\PortalUI.esproj", "{54E1AD3D-4B81-4A82-AAD1-387C9BA119FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "app", "app", "{62994D71-D356-4A28-BB8A-F7CE5C4F1DE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortalApp", "PortalApp\PortalApp.csproj", "{929148D1-805C-44FA-B588-2FB5B7F5242B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54E1AD3D-4B81-4A82-AAD1-387C9BA119FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54E1AD3D-4B81-4A82-AAD1-387C9BA119FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54E1AD3D-4B81-4A82-AAD1-387C9BA119FA}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{54E1AD3D-4B81-4A82-AAD1-387C9BA119FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54E1AD3D-4B81-4A82-AAD1-387C9BA119FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54E1AD3D-4B81-4A82-AAD1-387C9BA119FA}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{929148D1-805C-44FA-B588-2FB5B7F5242B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{929148D1-805C-44FA-B588-2FB5B7F5242B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{929148D1-805C-44FA-B588-2FB5B7F5242B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{929148D1-805C-44FA-B588-2FB5B7F5242B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{54E1AD3D-4B81-4A82-AAD1-387C9BA119FA} = {32B4A473-8CA7-4A8D-A7BB-EA88D4548712}
+		{929148D1-805C-44FA-B588-2FB5B7F5242B} = {62994D71-D356-4A28-BB8A-F7CE5C4F1DE8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6D91EDB8-FE40-46B6-91CF-C83EF82F4835}
+	EndGlobalSection
+EndGlobal
