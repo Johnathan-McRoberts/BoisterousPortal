@@ -7,6 +7,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+PortalApp.AppSetup.SetupServices(builder);
 
 builder.Services.AddCors(options =>
 {

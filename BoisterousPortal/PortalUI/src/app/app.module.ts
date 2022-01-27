@@ -12,6 +12,8 @@ import { FetchWeatherForecastsComponent } from './Components/fetch-weather-forec
 import { LayoutComponent } from './Components/Layout/layout/layout.component';
 import { SideNavigationListComponent } from './Components/Layout/side-navigation-list/side-navigation-list.component';
 import { NavigationHeaderComponent } from './Components/Layout/navigation-header/navigation-header.component';
+import { TemplatesListComponent } from './Components/Templates/templates-list/templates-list.component';
+import { ReportsListComponent } from './Components/Reports/reports-list/reports-list.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { NavigationHeaderComponent } from './Components/Layout/navigation-header
     FetchWeatherForecastsComponent,
     LayoutComponent,
     SideNavigationListComponent,
-    NavigationHeaderComponent
+    NavigationHeaderComponent,
+    TemplatesListComponent,
+    ReportsListComponent
   ],
   imports: [
     BrowserModule,

@@ -43,7 +43,17 @@ export class SideNavigationListComponent implements OnInit {
 
       {
         link: "/fetch", text: "Fetch better weather", icon: "import_export"
+      },
+
+      {
+        link: "/templates-list", text: "Templates", icon: "design_services"
+      },
+
+      {
+        link: "/reports-list", text: "Reports", icon: "post_add"
       }
+
+      
       //,
       //{
       //  link: "/home", text: "Home", icon: "home"
