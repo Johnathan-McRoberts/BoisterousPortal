@@ -1,3 +1,5 @@
+using BooksRelational.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -12,9 +14,9 @@ PortalApp.AppSetup.SetupServices(builder);
 builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(
-        builder =>
+        optionBuilder =>
         {
-            builder.WithOrigins("http://example.com",
+            optionBuilder.WithOrigins("http://example.com",
                                 "http://www.contoso.com",
                                 "http://localhost");
         });
@@ -41,15 +43,16 @@ app.UseSwaggerUI(options =>
     options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
     options.RoutePrefix = string.Empty;
 });
+
 app.UseHttpsRedirection();
 
 app.UseRouting();
 
-app.UseCors(builder =>
-builder.WithOrigins(new string []{ "http://localhost:4200", "https://localhost:4200", "*" })
-.AllowAnyHeader()
-.AllowCredentials()
-.AllowAnyMethod());
+app.UseCors(corsBuilder =>
+    corsBuilder.WithOrigins(new string []{ "http://localhost:4200", "https://localhost:4200", "*" })
+        .AllowAnyHeader()
+        .AllowCredentials()
+        .AllowAnyMethod());
 
 app.UseDefaultFiles();
 app.UseStaticFiles();
@@ -66,5 +69,10 @@ app.UseEndpoints(endpoints =>
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+var contextFactory = new BooksRelationalContextFactory();
+using (var client = contextFactory.CreateDbContext(new string[] { }))
+{
+    client.Database.EnsureCreated();
+}
 
 app.Run();

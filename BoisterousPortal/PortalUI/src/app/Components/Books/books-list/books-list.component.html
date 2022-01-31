@@ -1,0 +1,53 @@
+<p>books-list works!</p>
+<div>
+
+
+  <mat-form-field appearance="fill">
+    <input matInput (keyup)="applyBooksFilter($event.target)"
+           placeholder="Filter">
+  </mat-form-field>
+
+  <mat-table #table [dataSource]="dataSource"
+             #booksTableSort="matSort"
+             matSortActive="date"
+             matSortDisableClear
+             matSortDirection="asc"
+             matSort>
+
+
+    <ng-container matColumnDef="author">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Author </mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.author}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="title">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Title </mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.title}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="dateRead">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Date </mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.dateRead | date : "d MMMM yyyy"}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="pages">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Pages </mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.pages}}</mat-cell>
+    </ng-container>
+
+
+
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+
+    <mat-row *matRowDef="let row; columns: displayedColumns"
+             (click)="onBooksRowClicked(row)"></mat-row>
+  </mat-table>
+
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                 showFirstLastButtons
+                 aria-label="Select page of periodic elements">
+  </mat-paginator>
+</div>
+
