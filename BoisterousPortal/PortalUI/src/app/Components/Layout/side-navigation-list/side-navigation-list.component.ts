@@ -51,6 +51,10 @@ export class SideNavigationListComponent implements OnInit {
 
       {
         link: "/reports-list", text: "Reports", icon: "post_add"
+      },
+
+      {
+        link: "/books-list", text: "Books", icon: "menu_book"
       }
 
       

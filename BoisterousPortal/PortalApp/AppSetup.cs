@@ -1,4 +1,5 @@
 ﻿using BooksDbReader.Settings;
+using BooksRelational.Data;
 
 namespace PortalApp
 {
@@ -15,7 +16,9 @@ namespace PortalApp
                 // Add services to the container.
                 builder.Services.AddControllersWithViews();
 
+                builder.Services.AddEntityFrameworkSqlite().AddDbContext<BooksRelationalContext>();
             }
         }
+
     }
 }

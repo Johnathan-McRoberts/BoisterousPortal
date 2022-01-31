@@ -14,6 +14,8 @@ import { SideNavigationListComponent } from './Components/Layout/side-navigation
 import { NavigationHeaderComponent } from './Components/Layout/navigation-header/navigation-header.component';
 import { TemplatesListComponent } from './Components/Templates/templates-list/templates-list.component';
 import { ReportsListComponent } from './Components/Reports/reports-list/reports-list.component';
+import { BooksListComponent } from './Components/Books/books-list/books-list.component';
+import { BookDetailComponent } from './Components/Books/book-detail/book-detail.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { ReportsListComponent } from './Components/Reports/reports-list/reports-
     SideNavigationListComponent,
     NavigationHeaderComponent,
     TemplatesListComponent,
-    ReportsListComponent
+    ReportsListComponent,
+    BooksListComponent,
+    BookDetailComponent
   ],
   imports: [
     BrowserModule,

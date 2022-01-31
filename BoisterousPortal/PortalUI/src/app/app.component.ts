@@ -13,15 +13,6 @@ import { SideNavigationListComponent } from "./Components/Layout/side-navigation
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  //public forecasts?: WeatherForecast[];
-
-  //constructor(http: HttpClient) {
-  //  const url = `${environment.portalApiBase}/weatherforecast`;
-  //  http.get<WeatherForecast[]>(url).subscribe(result => {
-  //    this.forecasts = result;
-  //  }, error => console.error(error));
-  //}
-
 
   public selectedMenu: string = SideNavigationListComponent.defaultMenuItemText;
 
